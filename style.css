@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+    box-sizing: border-box;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+  }
+
+body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    
+
+}  
+h1 {
+    font-size: 80px;
+   padding: 20px;
+   margin: 20px;
+   
+}
+
+.contenedor{
+    margin-bottom: 20px;  
+
+    display: flex;
+    width: 500px;
+    height: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+ 
+    
+}
+.container
+{  
+    width: 32%;
+    height:33%; 
+    
+   
+}
+
+.ContenedorDeboton{
+    font-size: 18px;
+    margin-top: 20px;
+    border: 5px solid green;
+}
