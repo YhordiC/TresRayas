@@ -1,9 +1,9 @@
 let j=0;
 let turno=0;
 let juegoplay=true;
-let puedoEscribir=true;
 
-document.querySelectorAll("button").forEach( obj=> obj.addEventListener("click",saludar));
+
+document.querySelectorAll("button").forEach( obj=> obj.addEventListener("click",Colocar));
 let Contenedor= document.getElementsByClassName("container");
 let Parafo= document.getElementById('parafo');
 let Play= document.getElementById('Reset'); //
@@ -12,7 +12,7 @@ Play.addEventListener("click",resetearValor);
 
 
 
-function saludar(e) {
+function Colocar(e) {
    let cont= e.target;
  if(juegoplay)
  {  if(cont.innerHTML.length===0){
@@ -37,17 +37,17 @@ function saludar(e) {
    //  cont.style.fontSize="100%";
        turno=0;
    }
-   //prueba(cont.innerText,cont.innerText);
+   //CompararIgualdad(cont.innerText,cont.innerText);
   
       if(j>3)
-      { prueba(Contenedor[0].value,Contenedor[1].value,Contenedor[2].value);
-        prueba(Contenedor[0].value,Contenedor[4].value,Contenedor[8].value);
-        prueba(Contenedor[0].value,Contenedor[3].value,Contenedor[6].value);
-        prueba(Contenedor[3].value,Contenedor[4].value,Contenedor[5].value);
-        prueba(Contenedor[6].value,Contenedor[7].value,Contenedor[8].value);
-        prueba(Contenedor[6].value,Contenedor[4].value,Contenedor[2].value);
-        prueba(Contenedor[2].value,Contenedor[5].value,Contenedor[8].value);
-        prueba(Contenedor[1].value,Contenedor[4].value,Contenedor[7].value);}
+      { CompararIgualdad(Contenedor[0].value,Contenedor[1].value,Contenedor[2].value);
+        CompararIgualdad(Contenedor[0].value,Contenedor[4].value,Contenedor[8].value);
+        CompararIgualdad(Contenedor[0].value,Contenedor[3].value,Contenedor[6].value);
+        CompararIgualdad(Contenedor[3].value,Contenedor[4].value,Contenedor[5].value);
+        CompararIgualdad(Contenedor[6].value,Contenedor[7].value,Contenedor[8].value);
+        CompararIgualdad(Contenedor[6].value,Contenedor[4].value,Contenedor[2].value);
+        CompararIgualdad(Contenedor[2].value,Contenedor[5].value,Contenedor[8].value);
+        CompararIgualdad(Contenedor[1].value,Contenedor[4].value,Contenedor[7].value);}
    j++;
  }
   else{}
@@ -62,7 +62,7 @@ function saludar(e) {
  } */
 
 
- function prueba(a,b,c){
+ function CompararIgualdad(a,b,c){
     if(a===b&&c===a)
     {if(turno===1){ Parafo.innerHTML="Ganaste Jugador Rojo";}
       if(turno===0){ Parafo.innerHTML="Ganaste Jugador Azul";}
